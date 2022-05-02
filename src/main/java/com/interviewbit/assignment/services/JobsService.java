@@ -64,6 +64,14 @@ public class JobsService {
            jobs.getCompany().equals(f.getCompanyName())){
                jobslist.add(jobs);
            }
+       }
+   }
+   else if(!f.getLocation().equals("any") && f.getCompanyName().equals("any")){
+       for(JobsVO jobs: jobsList){
+           if(jobs.getExperience().equals(f.getExperience())&&jobs.getSkill().equals(f.getSkill())&&
+                   jobs.getLocation().equals(f.getLocation())){
+               jobslist.add(jobs);
+           }
 
        }
    }
